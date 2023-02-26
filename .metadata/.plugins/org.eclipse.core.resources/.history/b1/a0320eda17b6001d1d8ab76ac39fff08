@@ -1,0 +1,14 @@
+package Homework2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Takim[] takim=new Takim[4];
+		TakimManager takimm= new TakimManager();
+		
+		takim[0] = new Takim("Real Madrid");
+
+	}
+
+}

@@ -1,0 +1,61 @@
+package Homework1;
+
+public class CalisanBilgileri {
+	
+	private String name;
+	private int salary;
+	private int workHours;
+	private int hireYear;
+	
+	
+	public CalisanBilgileri() {
+		
+	}
+	
+	public CalisanBilgileri(String name, int salary, int workHours, int hireYear) {
+		super();
+		this.name = name;
+		this.salary = salary;
+		this.workHours = workHours;
+		this.hireYear = hireYear;
+	}
+	
+	public void tax(int salary) {
+		if (salary>2000) {
+			salary=(salary*5/100)+salary;
+		}
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public int getWorkHours() {
+		return workHours;
+	}
+	public void setWorkHours(int workHours) {
+		this.workHours = workHours;
+	}
+	public int getHireYear() {
+		return hireYear;
+	}
+	public void setHireYear(int hireYear) {
+		this.hireYear = hireYear;
+	}
+
+	@Override
+	public String toString() {
+		return "CalisanBilgileri [name=" + name + ", salary=" + salary + ", workHours=" + workHours + ", hireYear="
+				+ hireYear + "]";
+	}
+	
+	
+
+}

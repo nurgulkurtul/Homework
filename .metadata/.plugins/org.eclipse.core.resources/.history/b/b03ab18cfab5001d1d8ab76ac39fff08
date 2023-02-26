@@ -1,0 +1,10 @@
+package Homework1;
+
+public class metod {
+	
+	public void tax() {
+		double vergi=0;
+		if (CalisanBilgileri.getSalary>40);
+	}
+
+}

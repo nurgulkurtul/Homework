@@ -1,0 +1,40 @@
+package Homework1;
+
+public class Metod {
+	
+	public double tax(CalisanBilgileri calisanBilgileri) {
+		double vergi=0;
+		if (calisanBilgileri.getSalary()>40) {
+			vergi=calisanBilgileri.getSalary()*0.5;
+		}
+		return vergi;
+	}
+	
+	public int bonus(CalisanBilgileri calisanBilgileri) {
+		int bns=0;
+		if(calisanBilgileri.getWorkHours()>40) {
+			bns=(calisanBilgileri.getWorkHours()-40)*30;
+		}
+		return bns;
+	}
+
+	public double raiseSalary(CalisanBilgileri calisanBilgileri) {
+		double zam=0;
+		int yil=2022-calisanBilgileri.getHireYear();
+		if (yil<10 ) {
+			zam=calisanBilgileri.getHireYear()*5/100;
+		}else if(yil>10 && yil<20) {
+			zam=calisanBilgileri.getHireYear()*10/100;
+		}else if (yil>20) {
+			zam=calisanBilgileri.getHireYear()*15/100;
+		}
+		return zam;
+	}
+	
+	public void bilgileriGoster(CalisanBilgileri calisanBilgileri) {
+		System.out.println("Adı:" + calisanBilgileri.getName() + "Maaşı: " + calisanBilgileri.getSalary() + "Çalışma Saati" + calisanBilgileri.getWorkHours() 
+							+ "Başlangıç Yılı: " + calisanBilgileri.getHireYear() + "Vergi: " + tax(calisanBilgileri) + "Bonus:" + bonus(calisanBilgileri) 
+							+ "Maaş Artışı: " + raiseSalary(calisanBilgileri) + "Vergi ve bonuslar ile birlikte maaşı" + (tax(calisanBilgileri)+ bonus(calisanBilgileri)) 
+							+ "toplam maaşı" + (calisanBilgileri.getSalary()+ tax(calisanBilgileri)+bonus(calisanBilgileri)));
+	}
+}

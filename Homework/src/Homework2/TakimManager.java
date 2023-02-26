@@ -1,0 +1,49 @@
+package Homework2;
+
+import java.util.Random;
+
+public class TakimManager {
+	
+	public void macYap(Takim Takim1, Takim Takim2) {
+		Random random=new Random();
+		int sayi=random.nextInt(1,3);
+		
+		if (sayi==1) {
+			System.out.println("İlk takım kazanmıştır" + (Takim1.getPuan()+3) + (Takim1.getKasa()+10000) );
+			
+		}else if(sayi==2) {
+			System.out.println("İkinci takım kazanmıştır" + (Takim2.getPuan()+3) + (Takim2.getKasa()+10000) );
+		}
+		else {
+			System.out.println("Maç berabere bitmiştir" + "Birinci takım için puanlar" + (Takim1.getPuan()+1) + (Takim2.getKasa()+5000) +
+						"İkinci takım için puanlar" +  (Takim1.getPuan()+3) + (Takim1.getKasa()+10000) );
+		}
+	}
+	
+	public void kasaGoster(Takim Takim) {
+		System.out.println("Takımın kasa bilgileri" + Takim.getKasa());
+	}
+	
+	public void puanDurumu(Takim[] takim1) {
+		
+		for(Takim takim:takim1) {
+			System.out.println(takim.getName()+":" + takim.getPuan());
+		}
+	}
+	public void iflasDurumu(Takim[] takimKasa) {
+		for(Takim takim:takimKasa)
+			if (takim.getKasa()<5000) {
+				System.out.println(takim.getName()+ "iflas etmiştir");
+		}
+	}
+	public void sampiyon(Takim[] takimlar) {
+		Takim sampiyon=takimlar[0];
+		Takim sampiyonn=takimlar[1];
+		for(int i=0; i<takimlar.length; i++) {
+			if (takimlar[i].getPuan()>sampiyon.getPuan()) {
+			
+				sampiyonn=takimlar[i];
+			}
+		}
+	}
+}

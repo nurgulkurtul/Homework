@@ -1,0 +1,12 @@
+package Homework1;
+
+public class metod {
+	
+	public void tax(CalisanBilgileri calisanBilgileri) {
+		double vergi=0;
+		if (calisanBilgileri.getSalary()>40) {
+			vergi=calisanBilgileri.getSalary()*0.5;
+		}
+	}
+
+}
